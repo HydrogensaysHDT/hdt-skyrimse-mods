@@ -108,7 +108,7 @@ namespace hdt
 			printHookPoint({
 				HookPointPattern{0, 48, "\x44\x8b\xd2\x4c\x8b\xc1\x44\x2b\x51\x28\x83\x79\x34\x00\x0f\x85\xeb\x01\x00\x00\xf3\x0f\x10\x51\x10\x0f\x57\xe4\x0f\x2e\xd4\x0f\x57\xc0\x74\x35\x45\x8b\x50\x24\x0f\x28\xca\xf3\x0f\x58\x49\x14"},
 				}, __FILE__, __LINE__);
-			//DetourAttach((void**)Timer::_updateTimer_GetPtrAddr(), (void*)GetFnAddr(&Timer::updateTimer));
+			DetourAttach((void**)Timer::_updateTimer_GetPtrAddr(), (void*)GetFnAddr(&Timer::updateTimer));
 			
 			DetourTransactionCommit();
 			m_isHooked = true;

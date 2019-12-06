@@ -28,7 +28,7 @@ namespace hdt
 		FrameworkImpl::instance()->getFrameEventDispatcher()->dispatch(e);
 	}
 
-	auto oldShutdown = (void (*)(bool))(hookGetBaseAddr() + 0x01293870);
+	auto oldShutdown = (void (*)(bool))(hookGetBaseAddr() + 0x01293d20);
 	void shutdown(bool arg0)
 	{
 		FrameworkImpl::instance()->getShutdownEventDispatcher()->dispatch(ShutdownEvent());
@@ -42,12 +42,12 @@ namespace hdt
 			HookPointPattern{0x23, 5, "\xb9\x09\x00\x00\x00"},
 			HookPointPattern{0x2E, 15, "\xbf\x00\x80\x00\x00\x66\x85\xc7\x74\x14\xb9\x12\x00\x00\x00"},
 			}, __FILE__, __LINE__);
-		//DetourAttach((void**)UnkEngine::_onFrame_GetPtrAddr(), (void*)GetFnAddr(&UnkEngine::onFrame));
+		DetourAttach((void**)UnkEngine::_onFrame_GetPtrAddr(), (void*)GetFnAddr(&UnkEngine::onFrame));
 
 		printHookPoint({
 			HookPointPattern{0, 39, "\x48\x8b\xc4\x57\x48\x81\xec\x40\x01\x00\x00\x48\xc7\x44\x24\x30\xfe\xff\xff\xff\x48\x89\x58\x10\x48\x89\x70\x18\x33\xf6\x84\xc9\x0f\x84\x41\x02\x00\x00\x48"},
 			}, __FILE__, __LINE__);
-		//DetourAttach((void**)&oldShutdown, (void*)shutdown);
+		DetourAttach((void**)&oldShutdown, (void*)shutdown);
 	}
 
 	void unhookEngine()
