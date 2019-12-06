@@ -59,21 +59,77 @@ class NiTriStrips : public NiTriBasedGeom
 public:
 	static NiTriStrips * Create(NiTriShapeData * geometry);
 };
+//
+//enum BSVertexFlags
+//{
+//	VF_Unknown_1 = 1,
+//	VF_Unknown_2 = 2,
+//	VF_Unknown_3 = 4,
+//	VF_Unknown_4 = 8,
+//	VF_Vertex = 16,
+//	VF_UVs = 32,
+//	VF_Unknown_5 = 64,
+//	VF_Normals = 128,
+//	VF_Tangents = 256,
+//	VF_Vertex_Colors = 512,
+//	VF_Skinned = 1024,
+//	VF_Unknown_6 = 2048,
+//	VF_Male_Eyes = 4096,
+//	VF_Unknown_7 = 8192,
+//	VF_Full_Precision = 16384,
+//	VF_Unknown_8 = 32768,
+//};
+//
+//#pragma pack(push, 1)
+//union BSVertexFormat
+//{
+//	struct
+//	{
+//		uint8_t vertexSize; // num of float
+//		uint8_t floatSize; // ??? from nifskope
+//		uint8_t VF3;
+//		uint8_t VF4;
+//		uint8_t VF5;
+//		uint16_t vertexFlags;
+//		uint8_t VF8;
+//	};
+//	uint64_t uint64;
+//};
+//#pragma pack(pop)
+//static_assert(sizeof(BSVertexFormat) == 8, "");
 
 class BSGeometryData
 {
 public:
+
+	struct VertexUVSkinned
+	{
+		NiPoint3 pos;
+		uint32_t unk0c;
+		uint16_t uv[2];
+		uint16_t boneWeights[4];
+		uint8_t boneIndices[4];
+	};
+
+	struct VertexUVNormalTangentSkinned
+	{
+		NiPoint3 pos;
+		uint32_t unk0c;
+		uint16_t uv[2];
+		uint32_t unk14;
+		uint32_t unk18;
+		uint16_t boneWeights[4];
+		uint8_t boneIndices[4];
+	};
+
 	ID3D11Buffer * buffer1;		// 00
 	ID3D11Buffer * buffer2;		// 08
-	UInt16		unk10;			// 10
-	UInt16		unk12;			// 12
-	UInt16		unk14;			// 14
-	UInt16		unk16;			// 16
+	uint64_t vertexFormat;
 	volatile	UInt32	refCount;	// 18
 	UInt16		unk1C;			// 1C
 	UInt16		unk1E;			// 1E
-	UInt8		* vertices;		// 20
-	UInt8		* triangles;	// 28
+	uint8_t		* vertices;		// 20
+	uint16_t	* triangles;	// 28
 };
 
 // 158
@@ -411,7 +467,7 @@ public:
 	NiSkinPartitionPtr	m_spSkinPartition;	// 18
 	NiAVObject			* m_pkRootParent;	// 20
 	NiAVObject			** m_ppkBones;		// 28
-	
+
 	NiTransform			** m_worldTransforms;// 30
 	SInt32				unk38;				// 38
 	UInt32				m_uiBoneNodes;		// 3C

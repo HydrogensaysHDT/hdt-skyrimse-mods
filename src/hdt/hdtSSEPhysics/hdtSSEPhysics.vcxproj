@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B9F47E7B-068A-419A-9AA8-F72CCE662C2B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>hdtSSEPhysics</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir);$(SolutionDir)..;D:\code\bullet3-master\src;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\code\bullet3-master\vs2017_x64\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir);$(SolutionDir)..;D:\code\bullet3-master\src;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\code\bullet3-master\vs2017_x64\lib\RelWithDebInfo;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BT_USE_SSE_IN_API;_DISABLE_EXTENDED_ALIGNED_STORAGE;_DEBUG;HDTSSEPHYSICS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>export.def</ModuleDefinitionFile>
+      <AdditionalDependencies>BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>BT_USE_SSE_IN_API;_DISABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;HDTSSEPHYSICS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>export.def</ModuleDefinitionFile>
+      <AdditionalDependencies>BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ArmorManager.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="hdtConvertNi.h" />
+    <ClInclude Include="hdtDefaultBBP.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtAABB.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtBone.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtBoneScaleConstraint.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtBulletHelper.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtCollider.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtCollisionAlgorithm.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtConeTwistConstraint.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtConstraintGroup.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtDispatcher.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtGeneric6DofConstraint.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtGroupConstraintSolver.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSimulationIslandManager.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshAlgorithm.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshBody.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshBone.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshShape.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshSystem.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshWorld.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtStiffSpringConstraint.h" />
+    <ClInclude Include="hdtSkinnedMesh\hdtVertex.h" />
+    <ClInclude Include="hdtSkyrimBone.h" />
+    <ClInclude Include="hdtSkyrimMesh.h" />
+    <ClInclude Include="hdtSkyrimPhysicsWorld.h" />
+    <ClInclude Include="hdtSkyrimShape.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="XmlReader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ArmorManager.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="hdtConvertNi.cpp" />
+    <ClCompile Include="hdtDefaultBBP.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtAabb.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtBoneScaleConstraint.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtCollider.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtCollisionAlgorithm.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtConeTwistConstraint.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtConstraintGroup.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtDispatcher.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtGeneric6DofConstraint.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtGroupConstraintSolver.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSimulationIslandManager.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshAlgorithm.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshBody.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshBone.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshShape.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshSystem.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshWorld.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtStiffSpringConstraint.cpp" />
+    <ClCompile Include="hdtSkinnedMesh\hdtVertex.cpp" />
+    <ClCompile Include="hdtSkyrimBone.cpp" />
+    <ClCompile Include="hdtSkyrimMesh.cpp" />
+    <ClCompile Include="hdtSkyrimPhysicsWorld.cpp" />
+    <ClCompile Include="hdtSkyrimShape.cpp" />
+    <ClCompile Include="hdtSSEPhysics.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="XmlReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\hdtSSEUtils\hdtSSEUtils.vcxproj">
+      <Project>{ebb1a6fa-5e3c-49b5-a5b6-a6495b9cd5b0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="export.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

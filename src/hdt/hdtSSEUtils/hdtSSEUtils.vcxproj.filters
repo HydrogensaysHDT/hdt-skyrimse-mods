@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="skse">
+      <UniqueIdentifier>{c9b4af32-7f96-4bac-81bd-8ecdb40f1edf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TESUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetImmerseUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PapyrusUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="INIUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ref.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameworkUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MemUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TESUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NetImmerseUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameTypes.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\NiTypes.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameRTTI.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameForms.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameAPI.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\NiObjects.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\NiNodes.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="PapyrusUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="INIUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\PapyrusArgs.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\PapyrusVM.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\PapyrusNativeFunctions.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\PapyrusInterfaces.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameUtilities.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameworkUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameData.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64_common\Relocation.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameReferences.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameBSExtraData.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameExtraData.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameFormComponents.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\HashUtil.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IErrors.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IDebugLog.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IFileStream.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IDataStream.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameStreams.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\NiRTTI.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\NiGeometry.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\skse64\skse64\GameEvents.cpp">
+      <Filter>skse</Filter>
+    </ClCompile>
+    <ClCompile Include="MemUtils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="hdtSkinnedMesh">
+      <UniqueIdentifier>{fd847144-9824-4a18-930e-59138a3b423c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hdtSkyrimProxy">
+      <UniqueIdentifier>{32f72cd4-b755-4993-afa1-794d7dc7c19a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ArmorManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtAABB.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtBone.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtBoneScaleConstraint.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtBulletHelper.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtCollider.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtCollisionAlgorithm.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtConeTwistConstraint.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtConstraintGroup.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtDispatcher.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtGeneric6DofConstraint.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtGroupConstraintSolver.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSimulationIslandManager.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshAlgorithm.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshBody.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshBone.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshShape.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshSystem.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtSkinnedMeshWorld.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtStiffSpringConstraint.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkinnedMesh\hdtVertex.h">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtConvertNi.h">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkyrimBone.h">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkyrimMesh.h">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkyrimPhysicsWorld.h">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtSkyrimShape.h">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlReader.h">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClInclude>
+    <ClInclude Include="hdtDefaultBBP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSSEPhysics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ArmorManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtAabb.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtBoneScaleConstraint.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtCollider.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtCollisionAlgorithm.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtConeTwistConstraint.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtConstraintGroup.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtDispatcher.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtGeneric6DofConstraint.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtGroupConstraintSolver.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSimulationIslandManager.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshAlgorithm.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshBody.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshBone.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshShape.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshSystem.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtSkinnedMeshWorld.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtStiffSpringConstraint.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkinnedMesh\hdtVertex.cpp">
+      <Filter>hdtSkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtConvertNi.cpp">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkyrimBone.cpp">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkyrimMesh.cpp">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkyrimPhysicsWorld.cpp">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtSkyrimShape.cpp">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlReader.cpp">
+      <Filter>hdtSkyrimProxy</Filter>
+    </ClCompile>
+    <ClCompile Include="hdtDefaultBBP.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="export.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
